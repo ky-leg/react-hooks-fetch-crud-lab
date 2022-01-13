@@ -27,8 +27,8 @@ function App() {
         "correctIndex": data.correctIndex,
       })
     })
-    // .then((r) => r.json())
-    // .then((newQ) => setQuestions([...questions, newQ]))
+    .then((r) => r.json())
+    .then((newQ) => setQuestions([...questions, newQ]))
   }
 
   function deleteQ(id){
@@ -39,7 +39,7 @@ function App() {
       method: "DELETE",
     })
     .then(r => r.json())
-    .then(r => console.log(r))
+    // .then(r => console.log(r))
     setQuestions(newQuestions)
   }
 
